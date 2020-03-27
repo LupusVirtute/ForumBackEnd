@@ -8,9 +8,16 @@ namespace ForumBackEnd.Controllers
 {
 	public class HomeController : Controller
 	{
-		public ActionResult Index()
+		[HttpGet]
+		public ActionResult Index(string b)
 		{
 			ViewBag.Title = "Home Page";
+
+			return View();
+		}
+		[Route("Home/HelloThere/Index/")]
+		public ActionResult Index()
+		{
 
 			return View();
 		}

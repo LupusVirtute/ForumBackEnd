@@ -22,7 +22,7 @@ namespace ForumBackEnd.Controllers
 
 			return View();
 		}
-		public static string Test()
+		public string Test()
 		{
 			Samochod test = new Samochod("Red", 5);
 			return ObjectToJsonConverter.ObjectToJson(test);

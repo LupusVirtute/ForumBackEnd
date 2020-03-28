@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ForumBackEnd.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -20,6 +21,11 @@ namespace ForumBackEnd.Controllers
 		{
 
 			return View();
+		}
+		public static string Test()
+		{
+			Samochod test = new Samochod("Red", 5);
+			return ObjectToJsonConverter.ObjectToJson(test);
 		}
 	}
 }

@@ -1,4 +1,6 @@
+using ForumBackEnd.Models.Database.Classes;
 using System;
+using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -22,6 +24,17 @@ namespace ForumBackEnd.Models.Utilities
 				}
 			}
 			return randomStringBuilder.ToString();
+		}
+		public static bool DoesSessionIDExist(string sessionID)
+		{
+			return !string.IsNullOrEmpty(sessionID) &&
+			GlobalAppValues.sessions.Any(o => o.SessionID == sessionID);
+		}
+		public static Session GetUserSession(int userid){
+			if (userid < 0) 
+				return null;
+			
+			return GlobalAppValues.sessions.FirstOrDefault(o => o.UserID == userid && !o.IsSessionExpired());
 		}
 	}
 }

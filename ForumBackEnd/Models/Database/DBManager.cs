@@ -22,6 +22,22 @@ namespace ForumBackEnd.Models.Database
 			}
 			return data;
 		}
+		public static void ExecuteCommandNoReturn(SqlCommand command){
+			using(SqlConnection connection = new SqlConnection(ConnectionString))
+			{
+				using(command){
+					command.ExecuteNonQuery();
+				}
+			}
+		}
+		public static int GetTableColumnNextIncrement(string table,string dataColumn)
+		{
+			SqlCommand getSessionNextID = new SqlCommand($"SELECT currval(pg_get_serial_sequence('{table}', '{dataColumn}')); ");
+
+			return GetValue(
+					ExecuteCommand(getSessionNextID).Tables[0].Rows[0][0]
+				);
+		}
 		/// <summary>
 		/// Gets value from DataRow and Checks if it's null<br/>
 		/// if null gives out defaultValue

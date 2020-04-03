@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace ForumBackEnd.Controllers
 {
@@ -15,7 +11,6 @@ namespace ForumBackEnd.Controllers
 
 			return View();
 		}
-		[Route("Home/HelloThere/Index/")]
 		public ActionResult Index()
 		{
 

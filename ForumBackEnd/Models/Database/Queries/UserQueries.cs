@@ -1,6 +1,6 @@
 ﻿namespace ForumBackEnd.Models.Database.Queries
 {
-	public class UserQueries
+	public static class UserQueries
     {
 		public const string JoinSessionTables =
 			"SELECT" +
@@ -27,5 +27,15 @@
 			" registrationdate," +
 			" lastivisit" +
 			" WHERE email = @email AND pass = @password";
+		/// <summary>
+		/// Parameters <br/>
+		/// @uid - user id <br/>
+		/// @sessionid <br/>
+		/// @sessionExpirationDate <br/>
+		/// </summary>
+		public const string PutSessionID =
+		" INSERT INTO Sessions" +
+		" (userid,sessionid,sessionexpired)" +
+		" VALUES(@uid,@sessionid,@sessionExpirationDate)";
 	}
 }

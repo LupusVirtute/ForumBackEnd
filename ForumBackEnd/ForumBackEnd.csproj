@@ -162,12 +162,16 @@
     </Compile>
     <Compile Include="Models\Config.cs" />
     <Compile Include="Models\Database\Classes\Attachment.cs" />
+    <Compile Include="Models\Database\Classes\Category.cs" />
     <Compile Include="Models\Database\Classes\Message.cs" />
+    <Compile Include="Models\Database\Classes\Post.cs" />
     <Compile Include="Models\Database\Classes\Session.cs" />
+    <Compile Include="Models\Database\Classes\Topic.cs" />
     <Compile Include="Models\Database\Classes\User.cs" />
     <Compile Include="Models\Database\DBManager.cs" />
     <Compile Include="Models\Database\Queries\GeneralQueries.cs" />
     <Compile Include="Models\Database\Queries\UserQueries.cs" />
+    <Compile Include="Models\Database\Classes\Reaction.cs" />
     <Compile Include="Models\GlobalAppValues.cs" />
     <Compile Include="Models\Utilities.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

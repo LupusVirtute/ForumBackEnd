@@ -1,4 +1,5 @@
-﻿using ForumBackEnd.Models;
+
+using ForumBackEnd.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +17,6 @@ namespace ForumBackEnd.Controllers
 
 			return View();
 		}
-		[Route("Home/HelloThere/Index/")]
 		public ActionResult Index()
 		{
 

@@ -174,6 +174,8 @@
     <Compile Include="Models\Database\Classes\Reaction.cs" />
     <Compile Include="Models\GlobalAppValues.cs" />
     <Compile Include="Models\Utilities.cs" />
+    <Compile Include="Models\ObjectToJsonConverter.cs" />
+    <Compile Include="Models\Samochod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

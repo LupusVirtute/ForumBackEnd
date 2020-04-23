@@ -156,6 +156,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UserEndpointAreas\LoginController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -170,6 +171,7 @@
     <Compile Include="Models\Database\Classes\User.cs" />
     <Compile Include="Models\Database\DBManager.cs" />
     <Compile Include="Models\Database\Queries\GeneralQueries.cs" />
+    <Compile Include="Models\Database\Queries\MessageQueries.cs" />
     <Compile Include="Models\Database\Queries\UserQueries.cs" />
     <Compile Include="Models\Database\Classes\Reaction.cs" />
     <Compile Include="Models\GlobalAppValues.cs" />
@@ -231,6 +233,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Login\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

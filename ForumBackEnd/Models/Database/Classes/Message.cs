@@ -5,6 +5,7 @@ using System.Web;
 using System.Data.SqlClient;
 using ForumBackEnd.Models.Database.Queries;
 using ForumBackEnd.Models.Utilities;
+using System.Data;
 
 namespace ForumBackEnd.Models.Database.Classes
 {
@@ -23,7 +24,7 @@ namespace ForumBackEnd.Models.Database.Classes
         {
            DataSet MessageDataSet=new DataSet();
            SqlCommand command=new SqlCommand(MessageQueries.SearchMessageId);
-           command.Parameters.AddWithValue("@Message",MessageId);
+           command.Parameters.AddWithValue("@Message",messageId);
            MessageDataSet=DBManager.ExecuteCommand(command);
            DataRow MessageDataRow=MessageDataSet.Tables[0].Rows[0];
            MessageBuilder(MessageDataRow);

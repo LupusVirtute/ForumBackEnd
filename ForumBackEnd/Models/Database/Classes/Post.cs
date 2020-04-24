@@ -1,6 +1,7 @@
 ﻿using ForumBackEnd.Models.Database.Structs;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 
 namespace ForumBackEnd.Models.Database.Classes
@@ -13,6 +14,7 @@ namespace ForumBackEnd.Models.Database.Classes
         DateTime dateModified;
         Topic topic;
         List<Reaction> reactions;
+        DataRow postData;
 
         public void AddReaction(Reaction reaction)
         {
@@ -46,6 +48,12 @@ namespace ForumBackEnd.Models.Database.Classes
             this.isModified = isModified;
             this.dateModified = dateModified;
             this.topic = topic;
+        }
+
+        public Post(DataRow postData)
+        {
+            this.postData=postData;
+
         }
     }
 }

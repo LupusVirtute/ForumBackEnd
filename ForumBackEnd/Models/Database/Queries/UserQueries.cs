@@ -21,6 +21,7 @@
 			" WHERE Sessions.sessionid = @session ";
 		public const string UserByMailAndPassword = 
 			"SELECT username," +
+			" id,"+
 			" description," +
 			" avatarfilepath," +
 			" nickeffects," +
@@ -37,5 +38,20 @@
 		" INSERT INTO Sessions" +
 		" (userid,sessionid,sessionexpired)" +
 		" VALUES(@uid,@sessionid,@sessionExpirationDate)";
+		public const string PutUser =
+		" INSERT INTO Users" +
+		" (email,pass)" +
+		" VALUES (@email,@pass)";
+		public const string UserInfo =
+		" SELECT" +
+		" username," +
+		" description," +
+		" avatarfilepath," +
+		" nickeffects," +
+		" registrationdate," +
+		" lastvisit," +
+		" postcount" +
+		" FROM Users" +
+		" WHERE email = @email";
 	}
 }

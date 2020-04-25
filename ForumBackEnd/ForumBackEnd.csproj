@@ -156,6 +156,10 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UserEndpointAreas\InfoController.cs" />
+    <Compile Include="Controllers\UserEndpointAreas\LoginController.cs" />
+    <Compile Include="Controllers\UserEndpointAreas\PostsController.cs" />
+    <Compile Include="Controllers\UserEndpointAreas\RegisterController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -170,12 +174,15 @@
     <Compile Include="Models\Database\Classes\User.cs" />
     <Compile Include="Models\Database\DBManager.cs" />
     <Compile Include="Models\Database\Queries\GeneralQueries.cs" />
+    <Compile Include="Models\Database\Queries\MessageQueries.cs" />
+    <Compile Include="Models\Database\Queries\PostQueries.cs" />
     <Compile Include="Models\Database\Queries\UserQueries.cs" />
     <Compile Include="Models\Database\Classes\Reaction.cs" />
+    <Compile Include="Models\Enums\enum.cs" />
+    <Compile Include="Models\Error.cs" />
     <Compile Include="Models\GlobalAppValues.cs" />
     <Compile Include="Models\Utilities.cs" />
     <Compile Include="Models\ObjectToJsonConverter.cs" />
-    <Compile Include="Models\Samochod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -231,6 +238,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Info\" />
+    <Folder Include="Views\Login\" />
+    <Folder Include="Views\Posts\" />
+    <Folder Include="Views\Register\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

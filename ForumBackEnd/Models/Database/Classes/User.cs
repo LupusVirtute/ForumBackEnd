@@ -15,7 +15,15 @@ namespace ForumBackEnd.Models.Database.Classes
 		private string nickEffects;
 		private DateTime registrationDate;
 		private DateTime lastVisit;
+		private string sessionId;
 
+		public string SessionID
+		{
+			get
+			{
+				return sessionId;
+			}
+		}
 		public User(string sessionID)
 		{
 			if (string.IsNullOrEmpty(sessionID))
@@ -58,6 +66,7 @@ namespace ForumBackEnd.Models.Database.Classes
 			DataSet data = new DataSet();
 			data = DBManager.ExecuteCommand(command);
 			BuildUser(data.Tables[0].Rows[0]);
+			sessionId=GenerateSession((int)data.Tables[0].Rows[0]["id"]);
 		}
 		public User(DataRow dr){
 			BuildUser(dr);

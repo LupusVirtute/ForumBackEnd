@@ -76,7 +76,7 @@ namespace ForumBackEnd.Models.Database
 		/// <returns></returns>
 		public static bool IsIDSafe(object value)
 		{
-			return value.GetType() != typeof(int) || ((int)value) > -1;
+			return value.GetType() != typeof(int) && ((int)value) > -1;
 		}
 	}
 }

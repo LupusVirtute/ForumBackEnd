@@ -86,7 +86,7 @@ namespace ForumBackEnd.Models.Database.Classes
 
 		public static User GetUserByID(int id)
 		{
-			if (id > -1)
+			if (id < 0)
 			{
 				return null;
 			}

@@ -8,6 +8,10 @@ namespace ForumBackEnd.Models.Utilities
 {
 	public static class Utility
 	{
+		public static string GetStringTime(DateTime dateTime)
+		{
+			return dateTime.ToString("yyyy-MM-dd HH:mm:ss");
+		}
 		public static string GenerateRandomString(int length)
 		{
 			const string Chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+|}{:\";<>,./?\\";
